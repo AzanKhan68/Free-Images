@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azan World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>**Azan World**</h1>
+    </header>
+    <main>
+        <div class="input-container">
+            <label for="prompt-input">Enter your image prompt:</label>
+            <textarea id="prompt-input" rows="4" placeholder="e.g., A beautiful landscape with a serene lake at sunset"></textarea>
+        </div>
+
+        <div class="options-container">
+            <div class="aspect-ratio-container">
+                <label>Aspect Ratio:</label>
+                <div class="ratio-buttons">
+                    <button class="ratio-btn active" data-ratio="1:1">Square (1:1)</button>
+                    <button class="ratio-btn" data-ratio="9:16">Portrait (9:16)</button>
+                    <button class="ratio-btn" data-ratio="16:9">Landscape (16:9)</button>
+                </div>
+            </div>
+            <div class="reference-image-container">
+                <label for="reference-upload">Upload a reference image (optional):</label>
+                <input type="file" id="reference-upload" accept=".jpg, .jpeg, .png">
+            </div>
+        </div>
+
+        <button id="generate-btn">Generate Image</button>
+
+        <div id="loading-spinner" class="spinner"></div>
+
+        <div id="result-container" class="hidden">
+            <img id="generated-image" src="" alt="Generated Image">
+            <button id="download-btn">Download Image</button>
+        </div>
+
+        <div id="error-message" class="hidden"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
